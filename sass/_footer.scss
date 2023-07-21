@@ -11,6 +11,7 @@
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 2rem;
   align-items: center;
+  margin-bottom: 6rem;
 
   &__link:link,
   &__link:visited {
@@ -35,7 +36,6 @@
 .copyright {
   font-size: 1.4rem;
   color: $color-grey-light-2;
-  margin-top: 6rem;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
