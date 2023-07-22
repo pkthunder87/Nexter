@@ -17,6 +17,14 @@
   gap: 1.5rem;
   justify-content: center;
 
+  @include respond($bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @include respond($bp-small) {
+    padding: 5rem;
+  }
+
   &__logo {
     height: 3rem;
     justify-self: center;
