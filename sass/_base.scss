@@ -54,6 +54,7 @@ $bp-small: 37.5em; // 600px;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   @include respond($bp-largest) {
     font-size: 50%;
@@ -91,4 +92,10 @@ body {
   @include respond($bp-medium) {
     grid-template-rows: 6rem calc(100vh - 6rem);
   }
+}
+
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
 }

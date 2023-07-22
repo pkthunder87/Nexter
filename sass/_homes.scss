@@ -14,6 +14,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  .links {
+    padding: 2rem 4rem;
+  }
+
   &__img {
     width: 100%;
     grid-row: 1 / 2;
