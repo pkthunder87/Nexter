@@ -11,15 +11,54 @@
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <script defer src="script.js"></script>
 
     <title>nexter &mdash; your home, your freedom</title>
   </head>
   <body class="container">
     <div class="sidebar">
-      <button class="nav-btn"></button>
+      <!-- <button class="nav-btn"></button> -->
+
+      <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#features" class="navigation__link"
+                ><span>01</span>Features</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#testimonials" class="navigation__link"
+                ><span>02</span>Testimonials</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#homes" class="navigation__link"><span>03</span>Homes</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#gallery" class="navigation__link"
+                ><span>04</span>Gallery</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#footer" class="navigation__link"
+                ><span>05</span>Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
-    <header class="header">
+    <header class="header" id="header">
       <img src="img/logo.png" alt="Nexter logo" class="header__logo" />
       <h3 class="heading-3">Your own home:</h3>
       <h1 class="heading-1">The ultimate personal freedom</h1>
@@ -136,7 +175,7 @@
       <img src="img/story-2.jpeg" alt="New house" class="story__img--2" />
     </div>
 
-    <div class="story__content">
+    <div class="story__content" id="testimonials">
       <h3 class="heading-3 mb-sm">Happy Customers</h3>
       <h2 class="heading-2 heading-2--dark mb-md">
         &ldquo;The best decision of our lives&rdquo;
