@@ -440,6 +440,9 @@ a:visited {
   gap: 1.5rem;
   padding: 1.5rem;
 }
+.gallery__item {
+  overflow: hidden;
+}
 .gallery__item--1 {
   grid-row: 1/span 2;
   grid-column: 1/span 2;
@@ -501,6 +504,10 @@ a:visited {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: all 0.3s;
+}
+.gallery__img:hover {
+  transform: scale(125%);
 }
 
 .footer {
@@ -568,8 +575,8 @@ a:visited {
   }
 }
 .navigation__background {
-  height: 6rem;
-  width: 6rem;
+  height: 8rem;
+  width: 8rem;
   position: fixed;
   top: 0;
   left: 0;
