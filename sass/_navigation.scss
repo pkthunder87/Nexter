@@ -43,7 +43,8 @@
 
     @include respond($bp-large) {
       height: 6rem;
-      width: 6rem;
+      width: 100vw;
+      position: fixed;
 
       left: auto;
       right: 0;
@@ -115,7 +116,7 @@
   // FUNCTIONALITY
   &__checkbox:checked ~ &__background {
     background-image: radial-gradient($color-primary, $color-primary);
-    transform: scale(80);
+    transform: scale(40);
   }
 
   &__checkbox:checked ~ &__nav {

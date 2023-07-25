@@ -36,3 +36,26 @@ navList.addEventListener("click", function (e) {
   //   navCheckbox.click();
   // }
 });
+
+// Sticky NAV
+
+// const sidebar = document.querySelector(".sidebar");
+
+// const stickyNav = function (entries) {
+//   const [entry] = entries;
+//   console.log(entry);
+
+//   if (!entry.isIntersecting) {
+//     sidebar.classList.add("sticky");
+//   } else {
+//     sidebar.classList.remove("sticky");
+//   }
+// };
+
+// const obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
+
+// const sidebarObserver = new IntersectionObserver(stickyNav);
+// sidebarObserver.observe(sidebar);

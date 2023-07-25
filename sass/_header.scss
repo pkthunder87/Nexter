@@ -17,6 +17,10 @@
   gap: 1.5rem;
   justify-content: center;
 
+  .links {
+    padding: 2rem 0;
+  }
+
   @include respond($bp-medium) {
     grid-column: 1 / -1;
   }
