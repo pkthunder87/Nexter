@@ -19,43 +19,52 @@ const navList = document.body.querySelector(".navigation__list");
 // console.log(navList);
 const navCheckbox = document.body.querySelector(".navigation__checkbox");
 
-// console.log(getComputedStyle(navLinks).opacity);
-
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && getComputedStyle(navLinks).opacity === "1") {
     navCheckbox.click();
-    // console.log("Escape Key Pressed!");
   }
 });
 
 navList.addEventListener("click", function (e) {
-  // console.log(e.target);
   navCheckbox.click();
-
-  // if (e.target.classList.contains("navigation__link")) {
-  //   navCheckbox.click();
-  // }
 });
 
 // Sticky NAV
 
-// const sidebar = document.querySelector(".sidebar");
+const mediaQuery = window.matchMedia("(max-width: 1000px)");
+const sidebar = document.querySelector(".sidebar");
+const sidebar2 = document.querySelector(".sidebar--2");
+const header = document.querySelector(".header");
 
-// const stickyNav = function (entries) {
-//   const [entry] = entries;
-//   console.log(entry);
+const mediaQueryCheck = function () {
+  if (mediaQuery.matches) {
+    console.log("Media Matched!");
 
-//   if (!entry.isIntersecting) {
-//     sidebar.classList.add("sticky");
-//   } else {
-//     sidebar.classList.remove("sticky");
-//   }
-// };
+    sidebar2.classList.add("sidebar--top");
 
-// const obsOptions = {
-//   root: null,
-//   threshold: [0, 0.2],
-// };
+    const stickyNav = function (entries) {
+      const [entry] = entries;
+      console.log(entry);
 
-// const sidebarObserver = new IntersectionObserver(stickyNav);
-// sidebarObserver.observe(sidebar);
+      if (!entry.isIntersecting && mediaQuery.matches) {
+        sidebar.classList.add("sticky");
+      } else {
+        sidebar.classList.remove("sticky");
+      }
+    };
+
+    const obsOptions = {
+      root: null,
+      threshold: 1.0,
+    };
+
+    const sidebarObserver = new IntersectionObserver(stickyNav, obsOptions);
+    sidebarObserver.observe(header);
+  } else {
+    sidebar.classList.remove("sticky");
+  }
+};
+
+mediaQuery.addEventListener("change", mediaQueryCheck);
+
+mediaQueryCheck();

@@ -47,10 +47,6 @@ a:visited {
   text-decoration: none;
 }
 
-.sticky {
-  position: fixed;
-}
-
 .heading-4, .heading-3, .heading-2, .heading-1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
@@ -130,7 +126,7 @@ a:visited {
   justify-content: center;
 }
 @media only screen and (max-width: 62.5em) {
-  .sidebar {
+  .sidebar .clone {
     grid-column: 1/-1;
     grid-row: 1/2;
     justify-content: flex-end;
@@ -170,6 +166,23 @@ a:visited {
   .nav-btn::after {
     transform: translateY(1rem);
   }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .sidebar--top {
+    height: 6rem;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+}
+
+.sticky {
+  position: fixed;
+  z-index: 90;
+  opacity: 0.95;
+  height: 6rem;
+  width: 100vw;
+  backdrop-filter: blur(10px);
 }
 
 .header {
@@ -594,8 +607,7 @@ a:visited {
 @media only screen and (max-width: 62.5em) {
   .navigation__background {
     height: 6rem;
-    width: 100vw;
-    position: fixed;
+    width: 6rem;
     left: auto;
     right: 0;
   }

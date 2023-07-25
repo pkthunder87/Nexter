@@ -6,11 +6,20 @@
   display: flex;
   justify-content: center;
 
-  @include respond($bp-large) {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    justify-content: flex-end;
-    align-items: center;
+  // @include respond($bp-large) {
+  //   grid-column: 1 / -1;
+  //   grid-row: 1 / 2;
+  //   justify-content: flex-end;
+  //   align-items: center;
+  // }
+
+  .clone {
+    @include respond($bp-large) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 }
 
@@ -50,4 +59,21 @@
       transform: translateY(1rem);
     }
   }
+}
+
+.sidebar--top {
+  @include respond($bp-large) {
+    height: 6rem;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+}
+
+.sticky {
+  position: fixed;
+  z-index: 90;
+  opacity: 0.95;
+  height: 6rem;
+  width: 100vw;
+  backdrop-filter: blur(10px);
 }
