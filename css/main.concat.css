@@ -47,6 +47,10 @@ a:visited {
   text-decoration: none;
 }
 
+.sticky {
+  position: fixed;
+}
+
 .heading-4, .heading-3, .heading-2, .heading-1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
@@ -182,6 +186,9 @@ a:visited {
   gap: 1.5rem;
   justify-content: center;
 }
+.header .links {
+  padding: 2rem 0;
+}
 @media only screen and (max-width: 50em) {
   .header {
     grid-column: 1/-1;
@@ -272,7 +279,7 @@ a:visited {
 
 .features {
   grid-column: center-start/center-end;
-  margin: 15rem 0;
+  margin: 5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 6rem;
@@ -365,7 +372,7 @@ a:visited {
 
 .homes {
   grid-column: center-start/center-end;
-  margin: 15rem 0;
+  margin: 5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem;
@@ -587,7 +594,8 @@ a:visited {
 @media only screen and (max-width: 62.5em) {
   .navigation__background {
     height: 6rem;
-    width: 6rem;
+    width: 100vw;
+    position: fixed;
     left: auto;
     right: 0;
   }
@@ -638,7 +646,7 @@ a:visited {
 }
 .navigation__checkbox:checked ~ .navigation__background {
   background-image: radial-gradient(#c69963, #c69963);
-  transform: scale(80);
+  transform: scale(40);
 }
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
