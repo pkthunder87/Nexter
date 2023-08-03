@@ -9,6 +9,4 @@ All the code belongs to Jonas Schmedtmann and I'm just practicing and improving 
 
 scratch
 
-##### Live Site:
-
-[Nexter](https://pkthunder87.github.io/Nexter/)
+##### Live Site: [Nexter](https://pkthunder87.github.io/Nexter/)
