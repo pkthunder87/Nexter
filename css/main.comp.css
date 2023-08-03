@@ -400,6 +400,9 @@ a:visited {
 .home .links {
   padding: 2rem 2rem;
 }
+.home__form {
+  display: contents;
+}
 .home__img {
   width: 100%;
   grid-row: 1/2;
@@ -415,6 +418,12 @@ a:visited {
   z-index: 2;
   justify-self: end;
   margin: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.home__like:hover {
+  transform: scale(135%);
+  fill: red;
 }
 .home__name {
   grid-row: 1/2;
