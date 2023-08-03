@@ -18,6 +18,10 @@
     padding: 2rem 2rem;
   }
 
+  &__form {
+    display: contents;
+  }
+
   &__img {
     width: 100%;
     grid-row: 1 / 2;
