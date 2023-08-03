@@ -481,6 +481,15 @@ a:visited {
   z-index: 2;
   justify-self: end;
   margin: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.home__like:hover {
+  -webkit-transform: scale(135%);
+      -ms-transform: scale(135%);
+          transform: scale(135%);
+  fill: red;
 }
 .home__name {
   grid-row: 1/2;

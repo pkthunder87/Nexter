@@ -38,6 +38,13 @@
     z-index: 2;
     justify-self: end;
     margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(135%);
+      fill: red;
+    }
   }
 
   &__name {
